@@ -1,0 +1,13 @@
+# lock files
+packege-lock.json
+yarn.lock
+
+# Babel ES6 compiles files
+dist
+
+# Dependency directory
+node_modules
+
+# .env
+.env
+
