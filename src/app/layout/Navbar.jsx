@@ -2,25 +2,7 @@ import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import { AppBar, Toolbar,Link,IconButton,  Typography } from '@material-ui/core';
 import {AccountCircle} from "@material-ui/icons";
-
-const useStyles = theme => ({
-    appBar: {
-        borderBottom: `1px solid ${theme.palette.divider}`,
-        backgroundColor: '#673ab7'
-
-      },
-      toolbar: {
-        flexWrap: 'wrap',
-      },
-      toolbarTitle: {
-        flexGrow: 1,
-        textAlign:'left',
-      },
-      link: {
-        margin: theme.spacing(1, 1.5),
-      },
-});
-
+import styles from './styles';
 
 class Navbar extends React.Component {
     constructor(props) {
@@ -64,4 +46,4 @@ class Navbar extends React.Component {
     }
 }
 
-export default withStyles(useStyles)(Navbar);
+export default withStyles(styles)(Navbar);
