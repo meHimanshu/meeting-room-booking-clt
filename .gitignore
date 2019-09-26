@@ -1,5 +1,5 @@
 # lock files
-packege-lock.json
+package-lock.json
 yarn.lock
 
 # Babel ES6 compiles files
