@@ -16,6 +16,7 @@ import {
 } from "@material-ui/core/";
 import { loginStyles } from "./style";
 import { LockOutlined, VisibilityOff, Visibility } from "@material-ui/icons/";
+import { Redirect } from "react-router-dom";
 
 function SignIn(props) {
   const { classes } = props;
@@ -32,6 +33,21 @@ function SignIn(props) {
 
   const handleClickShowPassword = () => {
     setValues({ ...values, showPassword: !values.showPassword });
+  };
+  const isAuthenticated = localStorage.getItem("isAuthenticated");
+  if (isAuthenticated) {
+    return <Redirect to="/dashboard" />;
+  }
+
+  const hanleSubmitClick = () => {
+    if (
+      true
+      // values.username === "globa.admin@gmail.com" &&
+      // values.password === "12345678"
+    ) {
+      localStorage.setItem("isAuthenticated", true);
+      props.history.push("/dashboard");
+    }
   };
 
   return (
@@ -93,6 +109,7 @@ function SignIn(props) {
             variant="contained"
             color="primary"
             className={classes.submit}
+            onClick={hanleSubmitClick}
           >
             Sign In
           </Button>
