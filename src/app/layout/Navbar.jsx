@@ -65,7 +65,7 @@ class Navbar extends React.Component {
               <Link
                 variant="button"
                 color="inherit"
-                href={`/dashboard/rooms`}
+                href={`/rooms`}
                 className={classes.link}
               >
                 Rooms
@@ -73,7 +73,7 @@ class Navbar extends React.Component {
               <Link
                 variant="button"
                 color="inherit"
-                href={`/dashboard/my-booking`}
+                href={`/my-booking`}
                 className={classes.link}
               >
                 My Bookings
