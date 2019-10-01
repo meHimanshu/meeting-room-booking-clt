@@ -13,6 +13,8 @@ const styles = theme => ({
     },
     link: {
         margin: theme.spacing(1, 1.5),
+        textDecoration: 'none',
+        color: 'white'
     },
 });
 

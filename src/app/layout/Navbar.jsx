@@ -1,13 +1,12 @@
 import React from "react";
 import { withStyles } from "@material-ui/core/styles";
-import { withRouter } from "react-router-dom";
+import { withRouter, Link } from "react-router-dom";
 import { AccountCircle } from "@material-ui/icons";
 import {
   AppBar,
   Toolbar,
   IconButton,
   Typography,
-  Link,
   Menu,
   MenuItem
 } from "@material-ui/core";
@@ -65,7 +64,7 @@ class Navbar extends React.Component {
               <Link
                 variant="button"
                 color="inherit"
-                href={`/rooms`}
+                to={`/rooms`}
                 className={classes.link}
               >
                 Rooms
@@ -73,7 +72,7 @@ class Navbar extends React.Component {
               <Link
                 variant="button"
                 color="inherit"
-                href={`/my-booking`}
+                to={`/my-booking`}
                 className={classes.link}
               >
                 My Bookings
